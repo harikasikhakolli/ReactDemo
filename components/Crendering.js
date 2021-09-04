@@ -1,34 +1,31 @@
-function Signin()
-{
-   return(
-       <h1>Welcome Harika</h1>
-   )
+function User(){
+    return(
+        <h1>Welcome User</h1>
+    )
 }
-function Signout(){
-          return(
-              <h2>welcome Guest</h2>
-          )
-}
-const data=[{id1:12,name:'student1'},{id1:14,name:'student2'},{id1:13,name:'student3'}]
-
-function Crendering()
+function Guest()
 {
-    const D1=data.map((d,index)=><li key={index}>{index}{d.name}</li>)
-    // const isLoggedIN=true;
-    // if(isLoggedIN)
-    //   return <Signin/>
-      
-    // else
-    //    return <Signout/>
+    return(
+        <h2>Welcome guest</h2>
+    )
+}
 
-    // return(
-    //     (10 > 5) && alert('This alert will be shown!') 
-    // )
-
+function Crendering(){
   
-   return(
-       <ul>{D1}</ul>
-   )
+      const isLoggedIn=false
+//    if(isLoggedIn){
+//        return <User/>
+//    }
+//    else{
+//        return<Guest/>
+//    }
+   
+     return(
+        //  (isLoggedIn)&&alert('Hello Harika')
+
+        (isLoggedIn)?<User/>:<Guest/>
+
+     )
 
 
 }
